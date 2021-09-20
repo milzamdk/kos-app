@@ -4,7 +4,7 @@ import 'package:kos_app/string.dart';
 class FacilityItem extends StatelessWidget {
   final String name;
   final String imageUrl;
-  final int total;
+  final String total;
 
   FacilityItem({
     required this.name,
@@ -25,12 +25,12 @@ class FacilityItem extends StatelessWidget {
         ),
         Text.rich(
           TextSpan(
-            text: '$total',
-            style: blackTextStyle.copyWith(fontSize: 14),
+            text: '$name :',
+            style: greyTextStyle.copyWith(fontSize: 14),
             children: [
               TextSpan(
-                text: ' $name',
-                style: greyTextStyle.copyWith(fontSize: 14),
+                text: ' $total',
+                style: blackTextStyle.copyWith(fontSize: 14),
               ),
             ],
           ),

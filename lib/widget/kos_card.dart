@@ -84,7 +84,7 @@ class KosCard extends StatelessWidget {
               ),
               Text.rich(
                 TextSpan(
-                  text: '\$${kos.harga}',
+                  text: 'Rp ${kos.harga}',
                   style: blueTextStyle.copyWith(fontSize: 16),
                   children: [
                     TextSpan(

@@ -116,7 +116,7 @@ class _DetailKosPageState extends State<DetailKosPage> {
                                 ),
                                 Text.rich(
                                   TextSpan(
-                                    text: '\$${widget.kos.harga}',
+                                    text: 'Rp ${widget.kos.harga}',
                                     style:
                                         blackTextStyle.copyWith(fontSize: 16),
                                     children: [
@@ -166,22 +166,41 @@ class _DetailKosPageState extends State<DetailKosPage> {
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 24),
                         child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
-                            FacilityItem(
-                              imageUrl: 'assets/icon_bathroom.png',
-                              total: widget.kos.kamarmandi,
-                              name: 'kamar mandi',
+                            Column(
+                              children: [
+                                FacilityItem(
+                                  imageUrl: 'assets/icon_bathroom.png',
+                                  total: '${widget.kos.kamarmandi}',
+                                  name: 'kamar mandi',
+                                ),
+                                SizedBox(
+                                  height: 16,
+                                ),
+                                FacilityItem(
+                                  imageUrl: 'assets/icon_bedroom.png',
+                                  total: '${widget.kos.tempattidur}',
+                                  name: 'tempat tidur',
+                                ),
+                              ],
                             ),
-                            FacilityItem(
-                              imageUrl: 'assets/icon_bedroom.png',
-                              total: widget.kos.tempattidur,
-                              name: 'tempat tidur',
-                            ),
-                            FacilityItem(
-                              imageUrl: 'assets/ic_cupboard.png',
-                              total: widget.kos.lemari,
-                              name: 'lemari',
+                            Column(
+                              children: [
+                                FacilityItem(
+                                  imageUrl: 'assets/ic_cupboard.png',
+                                  total: '${widget.kos.lemari}',
+                                  name: 'lemari',
+                                ),
+                                SizedBox(
+                                  height: 16,
+                                ),
+                                FacilityItem(
+                                  imageUrl: 'assets/ic_cupboard.png',
+                                  total: '${widget.kos.mejakursi}',
+                                  name: 'lemari',
+                                ),
+                              ],
                             ),
                           ],
                         ),

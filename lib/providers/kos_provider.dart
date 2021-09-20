@@ -7,8 +7,10 @@ import 'package:kos_app/model/kos.dart';
 
 class KosProvider extends ChangeNotifier {
   getRecommendedKos() async {
-    var result = await http
-        .get(Uri.parse('http://bwa-cozy.herokuapp.com/recommended-spaces'));
+    // var result = await http
+    //     .get(Uri.parse('http://bwa-cozy.herokuapp.com/recommended-spaces'));
+    var result = await http.get(Uri.parse(
+        'https://run.mocky.io/v3/9fb31f0f-87e7-4e49-ab4c-6eca9c6286f1'));
     print(result.statusCode);
     print(result.body);
 
